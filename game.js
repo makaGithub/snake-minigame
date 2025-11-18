@@ -29,8 +29,8 @@ let { gridSize, cols, rows } = setupCanvas();
 // Настройки игры
 const DIFFICULTY_SETTINGS = {
     easy: { speed: 200, scoreMultiplier: 1 },
-    medium: { speed: 150, scoreMultiplier: 1.5 },
-    hard: { speed: 75, scoreMultiplier: 2.5 }
+    medium: { speed: 100, scoreMultiplier: 2 },
+    hard: { speed: 50, scoreMultiplier: 3 }
 };
 
 let gameState = {
