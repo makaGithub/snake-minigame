@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#3390ec">
+    <title>Змейка - Telegram Mini App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🐍 Змейка</h1>
+            <div class="score-board">
+                <div class="score-item">
+                    <span class="label">Очки:</span>
+                    <span id="score">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="label">Уровень:</span>
+                    <span id="level">1</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-container">
+            <canvas id="gameCanvas"></canvas>
+            <div id="gameOver" class="game-over hidden">
+                <h2>Игра окончена!</h2>
+                <p>Ваш результат: <span id="finalScore">0</span> очков</p>
+                <button id="restartBtn" class="btn">Играть снова</button>
+            </div>
+            <div id="startScreen" class="start-screen">
+                <h2>Выберите сложность</h2>
+                <div class="difficulty-buttons">
+                    <button class="btn difficulty-btn" data-difficulty="easy">🟢 Легкий</button>
+                    <button class="btn difficulty-btn" data-difficulty="medium">🟡 Средний</button>
+                    <button class="btn difficulty-btn" data-difficulty="hard">🔴 Сложный</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="control-buttons">
+                <button class="control-btn" id="btnUp">↑</button>
+                <div class="control-row">
+                    <button class="control-btn" id="btnLeft">←</button>
+                    <button class="control-btn" id="btnDown">↓</button>
+                    <button class="control-btn" id="btnRight">→</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <p>Используйте стрелки на экране или клавиши на клавиатуре</p>
+        </div>
+    </div>
+
+    <script src="telegram.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
+
